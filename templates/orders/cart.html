@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Your Cart{% endblock %}
+{% block content %}
+
+<h1>Your Cart</h1>
+
+<div class="card">
+    <p>🍜 Sample Item x1 — AED 25</p>
+    <p>🥤 Drink x1 — AED 8</p>
+    <hr>
+    <p><strong>Total: AED 33</strong></p>
+
+    <form method="post" onsubmit="return confirmOrder();">
+        {% csrf_token %}
+        <button type="submit" class="btn">Place Order</button>
+    </form>
+</div>
+
+{% endblock %}

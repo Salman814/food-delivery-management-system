@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Restaurants{% endblock %}
+{% block content %}
+
+<h1>Restaurants Near You</h1>
+
+<div style="display:flex; flex-wrap:wrap; justify-content:space-between;">
+    {% for r in restaurants %}
+    <div class="card" style="width:23%;">
+        <img src="{{ r.img }}" alt="{{ r.name }}">
+        <h3>{{ r.name }}</h3>
+        <p>{{ r.cuisine }} &bull; ⭐ {{ r.rating }}</p>
+        <a href="{% url 'cart' %}" class="btn">Order Now</a>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

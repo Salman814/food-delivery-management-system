@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Home | Food Delivery{% endblock %}
+{% block content %}
+
+<div style="text-align:center; padding:40px 0;">
+    <h1>Order Great Food, Fast.</h1>
+    <p>Your favourite restaurants, delivered straight to your door.</p>
+    <a href="{% url 'restaurant_list' %}" class="btn">Browse Restaurants</a>
+</div>
+
+<h2>Popular Restaurants</h2>
+<div style="display:flex; flex-wrap:wrap; justify-content:space-between;">
+
+    <div class="card" style="width:30%;">
+        <img src="https://picsum.photos/400/300?random=1" alt="Restaurant">
+        <h3>Spice Garden</h3>
+        <p>Indian &bull; ⭐ 4.5</p>
+    </div>
+
+    <div class="card" style="width:30%;">
+        <img src="https://picsum.photos/400/300?random=2" alt="Restaurant">
+        <h3>Pasta Palace</h3>
+        <p>Italian &bull; ⭐ 4.7</p>
+    </div>
+
+    <div class="card" style="width:30%;">
+        <img src="https://picsum.photos/400/300?random=3" alt="Restaurant">
+        <h3>Burger House</h3>
+        <p>Fast Food &bull; ⭐ 4.3</p>
+    </div>
+
+</div>
+
+{% endblock %}
