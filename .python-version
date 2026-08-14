@@ -1,2 +1,1 @@
-New-Item -Path ".python-version" -ItemType File -Force
-Set-Content ".python-version" "3.13"
+3.13.5
